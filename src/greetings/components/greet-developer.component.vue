@@ -1,4 +1,6 @@
 <script>
+import {Developer} from "../model/developer.entity.js";
+
 export default {
   name: "greet-developer",
   props: {
@@ -16,9 +18,9 @@ export default {
   }
 }
 </script>
-  <p>{{ getGreeting() }}</p>
-<template>
 
+<template>
+  <p>{{ getGreeting() }}</p>
 </template>
 
 <style scoped>
