@@ -29,7 +29,7 @@ package "Greetings Bounded Context" {
     developer-registered(developer: Developer)
     later(developer: Developer)
  }
- class GreetDeveloper{
+ class GreetDeveloper {
  +firstName: String
  +lastName: String
  +getGreeting(): String
@@ -38,14 +38,14 @@ package "Greetings Bounded Context" {
  +developerCount: Number
  }
  }
- }
- 'Relationships'
- App *-down-> RegisterDeveloper : contains
- App *-down-> GreetDeveloper : contains
- App *-down-> ShowDeveloperCount : contains
- RegisterDeveloper --> App : emits developer-registered, later
- GreetDeveloper --> Developer : uses
- App --> Developer: uses
- GreetDeveloper <-- App : passes firstName, lastName
- showDeveloperCount <-- App : passes developerCount
+}
+' Relationships
+App *-down-> RegisterDeveloper : contains
+App *-down-> GreetDeveloper : contains
+App *-down-> ShowDeveloperCount : contains
+RegisterDeveloper --> App : emits developer-registered, later
+GreetDeveloper --> Developer : uses
+App --> Developer : uses
+GreetDeveloper <-- App : passes firstName, lastName
+ShowDeveloperCount <-- App : passes developerCount
 @enduml
