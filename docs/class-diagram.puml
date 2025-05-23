@@ -38,6 +38,7 @@ package "Greetings Bounded Context" {
  +developerCount: Number
  }
  }
+ }
  'Relationships'
  App *-down-> RegisterDeveloper : contains
  App *-down-> GreetDeveloper : contains
